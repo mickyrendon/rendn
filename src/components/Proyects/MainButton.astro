@@ -1,0 +1,15 @@
+---
+interface Props {
+    btnName: string;
+    url: string;
+}
+
+const { btnName, url } = Astro.props
+---
+<a 
+    href={url}
+    class="px-5 h-12 flex items-center gap-2 bg-blue-500 rounded-md font-bold text-white sm:text-sm"
+>
+    {btnName}
+    <slot name="after">
+</a>
