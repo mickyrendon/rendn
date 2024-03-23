@@ -2,9 +2,9 @@ export const proyectStructure = [
     // imgAlt =  la primera en mayuscula para que no hayan errores
     {
         title: `SHOPPI`,
-        content: `Ecommerce que permite filtrar productos por su título y categoría, consultar detalles de un producto, agregar productos al carrito de compras, hacer checkout y revisar historial de compras. Usa la API de 'Fake Store'. Componentes, Modularización, local storage, navegación con react-router-dom, react-hooks, refactorización del código (DRY), creado con ReactJS, Vite.js, HTML y Tailwind.`,
+        content: `Ecommerce que permite filtrar productos por su título y categoría, consultar detalles, agregar al carrito de compras, hacer checkout y revisar historial de compras. Usa la API de 'Fake Store'. Componentes, Modularización, local storage, navegación con react-router-dom, react-hooks, creado con ReactJS, Vite.js, HTML y Tailwind.`,
         imgAlt: `Shoppi`,
-        bkgImage: `/assets/proyectsBackgrounds/shoppi.png`,
+        bkgImage: `assets/proyectsBackgrounds/shoppi.png`,
         iconImage: `assets/ProyectsIcons/shoppi.svg`,
         buttons : {
             demoURl: `https://shoppiapp.netlify.app/`,

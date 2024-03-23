@@ -5,15 +5,18 @@ import Biobtns from '../components/Hero/Biobtns/Biobtns.astro';
 import Bio from '../components/Hero/Bio/Bio.astro';
 import Card from '../components/Proyects/Card.astro';
 import SkillsCard from '../components/SkillCards/SkillsCard.astro'
+import AcademicCard from '../components/SkillCards/AcademicCard.astro'
 import Form from '../components/Footer/Form.astro';
 
 import {proyectStructure} from '../components/Proyects/cardsContent'
 import {stack, currentLearning} from '../components/SkillCards/techsContent'
+import { academic } from '../components/SkillCards/academicContent';
 
 
 const proyects = proyectStructure
 const techsStack = stack
 const currentLearningStack = currentLearning
+const academics = academic
 ---
 
 <Layout title="rendn portfolio">
@@ -24,10 +27,13 @@ const currentLearningStack = currentLearning
 			<Bio content=
 				"Bienvenido a mi portafolio! soy Miguel Rendón, mejor conocido como 'micky'. Soy un desarrollador web Front end con más de dos años de experiencia me especializo en diseño y desarrollo web, Posicionamiento web(SEO) y marketing digital. Soy un chico Colombiano 🇨🇴 que viaja por el mundo, apasionado por la fotografía, el diseño y los deportes. En mis tiempos libres traduzco articulos de programación al español para FreeCodeCamp."
 			/>
-			<section role="list" class="link-card-grid" title="portfolio section">
+			<section 
+			role="list"
+			class="link-card-grid"
+			title="portfolio section">
 				<!--proyects -->
 				{
-					proyects.map(
+					proyects?.map(
 						({title, content, imgAlt, bkgImage, iconImage, buttons}) => (
 							<Card
 								title={title}
@@ -42,36 +48,43 @@ const currentLearningStack = currentLearning
 					)
 				}
 			</section>
-			<article class="technologies">
-				{
-					techsStack?.map(({name, url}) => {
-						<SkillsCard
-							title='Tecnologías'
+			<article class="technologies py-4 px-8 rounded-md block shadow-2xl shadow-amber-600">
+				<h4>Tecnologías</h4>
+				<ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start">
+
+					{
+						techsStack?.map(({name, url}) => (
+							<SkillsCard
 							icon={url}
 							name={name}
-						/>
-					})
-				}
-				{
-					currentLearningStack?.map(({name, url}) => {
-						<SkillsCard
-						title='Actualmente aprendiendo'
-						icon={url}
-						name={name}
-						/>
-					})
-				}
+							/>
+						))
+					}
+				</ul>
+				<h4 class="mt-8 mb-4">Actualmente aprendiendo</h4>
+				<ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start">
+					{
+						currentLearningStack?.map(({name, url}) => (
+							<SkillsCard
+							icon={url}
+							name={name}
+							/>
+						))
+					}
+				</ul>
 			</article>
-			<article class="academic">
-				{
-					// academics?.map(({name, url}) => {
-					// 	<SkillsCard
-					// 		title='Tecnologías'
-					// 		icon={url}
-					// 		name={name}
-					// 	/>
-					// })
-				}
+			<article class="academic py-4 px-8 rounded-md block shadow-2xl shadow-amber-600">
+				<h4>Académico</h4>
+				<!-- <ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start"> -->
+					{
+						// FIXME, no renderizan los curos correectamente
+						academics?.map(({title, courses }) => (
+							<AcademicCard
+								title={title}
+								courses={courses.platziFSWD}
+							/>
+						))
+					}
 			</article>
 		</div>
 	</main>
@@ -119,4 +132,3 @@ const currentLearningStack = currentLearning
 		padding: 0;
 	}
 </style>
-../components/SkillCards/Academic/SkillsCard.astro../components/SkillCards/Academic/academicContent

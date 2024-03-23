@@ -1,89 +1,89 @@
 export const stack = [
     {
         name: `React`,
-        url: `./assets/profilePic/techIcons/react.svg`
+        url: `assets/techIcons/react.svg`
     },
     {
         name: `JavaScript`,
-        url: `./assets/profilePic/techIcons/js.svg`
+        url: `assets/techIcons/js.svg`
     },
     {
         name: `HTML5`,
-        url: `./assets/profilePic/techIcons/html.svg`
+        url: `assets/techIcons/html.svg`
     },
     {
         name: `CSS3`,
-        url: `./assets/profilePic/techIcons/css.svg`
+        url: `assets/techIcons/css.svg`
     },
     {
         name: `Tailwind`,
-        url: `./assets/profilePic/techIcons/tailwind.svg`
+        url: `assets/techIcons/tailwind.svg`
     },
     {
         name: `Bootstrap`,
-        url: `./assets/profilePic/techIcons/bootstrap.svg`
+        url: `assets/techIcons/bootstrap.svg`
     },
     {
         name: `Sass`,
-        url: `./assets/profilePic/techIcons/sass.svg`
+        url: `assets/techIcons/sass.svg`
     },
     {
         name: `Git`,
-        url: `./assets/profilePic/techIcons/git.svg`
+        url: `assets/techIcons/git.svg`
     },
     {
         name: `Github`,
-        url: `./assets/profilePic/techIcons/github.svg`
+        url: `assets/techIcons/github.svg`
     },
     {
         name: `MySQL`,
-        url: `./assets/profilePic/techIcons/mysql.svg`
+        url: `assets/techIcons/mysql.svg`
     },
     {
         name: `Webpack`,
-        url: `./assets/profilePic/techIcons/webpack.svg`
+        url: `assets/techIcons/webpack.svg`
     },
     {
         name: `npm`,
-        url: `./assets/profilePic/techIcons/npm.svg`
+        url: `assets/techIcons/npm.svg`
     },
     {
         name: `Figma`,
-        url: `./assets/profilePic/techIcons/figma.svg`
+        url: `assets/techIcons/figma.svg`
     },
     {
         name: `Adobe XD`,
-        url: `./assets/profilePic/techIcons/xd.svg`
+        url: `assets/techIcons/xd.svg`
     },
     {
         name: `Photoshop`,
-        url: `./assets/profilePic/techIcons/ps.svg`
+        url: `assets/techIcons/ps.svg`
     },
     {
         name: `Ilustrator`,
-        url: `./assets/profilePic/techIcons/ai.svg`
+        url: `assets/techIcons/ai.svg`
     },
     {
         name: `Premiere Pro`,
-        url: `./assets/profilePic/techIcons/pr.svg`
+        url: `assets/techIcons/pr.svg`
     }
 ]
 
 export const currentLearning = [
     {
         name: `TypeScript`,
-        url: `./assets/profilePic/techIcons/typescript.svg`
+        url: `assets/techIcons/typescript.svg`
     },
     {
         name: `NodeJS`,
-        url: `./assets/profilePic/techIcons/node.svg`
+        url: `assets/techIcons/node.svg`
     },
     {
         name: `MongoDB`,
-        url: `./assets/profilePic/techIcons/mongo.svg`
+        url: `assets/techIcons/mongo.svg`
     },
     {
         name: `Express`,
-        url: `./assets/profilePic/techIcons/express.svg`
+        url: `assets/techIcons/express.svg`
     }
 ]

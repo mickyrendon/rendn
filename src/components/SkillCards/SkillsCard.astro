@@ -1,15 +1,11 @@
 ---
 interface Props {
-    title: string;
 	name: string;
     icon:string;
 }
-const { name, title, icon } = Astro.props;
+const { name, icon } = Astro.props;
 ---
-<ul>
-    <h1>{title}</h1>
-    <li>
-        <img src={icon} alt={name.concat('-icon')}>
-        <slot name="before">{name}</slot>
-    </li>
-</ul>
+<li class="w-1/2 my-2 text-center flex items-center self-center text-sm">
+    <img src={icon} alt={name.concat('-icon')} class="mr-2">
+    <slot name="before">{name}</slot>
+</li>
