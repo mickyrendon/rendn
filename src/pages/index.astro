@@ -21,15 +21,20 @@ const academics = academic
 
 <Layout title="rendn portfolio">
 	<Header/>
-	<main>
+	<main class="md:max-w-[900px]">
 		<div class="resume">
-			<Biobtns value="Descargar CV"/>
-			<Bio content=
+			<div class="mb-8">
+				<Biobtns
+				value="Descargar CV"/>
+				<Bio 
+				title='¡Hola!'
+				content=
 				"Bienvenido a mi portafolio! soy Miguel Rendón, mejor conocido como 'micky'. Soy un desarrollador web Front end con más de dos años de experiencia me especializo en diseño y desarrollo web, Posicionamiento web(SEO) y marketing digital. Soy un chico Colombiano 🇨🇴 que viaja por el mundo, apasionado por la fotografía, el diseño y los deportes. En mis tiempos libres traduzco articulos de programación al español para FreeCodeCamp."
-			/>
+				/>
+			</div>
 			<section 
 			role="list"
-			class="link-card-grid"
+			class="link-card-grid "
 			title="portfolio section">
 				<!--proyects -->
 				{
@@ -48,47 +53,56 @@ const academics = academic
 					)
 				}
 			</section>
-			<article class="technologies py-4 px-8 rounded-md block shadow-2xl shadow-amber-600">
-				<h4>Tecnologías</h4>
-				<ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start">
-
-					{
-						techsStack?.map(({name, url}) => (
-							<SkillsCard
-							icon={url}
-							name={name}
-							/>
-						))
-					}
-				</ul>
-				<h4 class="mt-8 mb-4">Actualmente aprendiendo</h4>
-				<ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start">
-					{
-						currentLearningStack?.map(({name, url}) => (
-							<SkillsCard
-							icon={url}
-							name={name}
-							/>
-						))
-					}
-				</ul>
-			</article>
-			<article class="academic py-4 px-8 rounded-md block shadow-2xl shadow-amber-600">
-				<h4>Académico</h4>
-				<!-- <ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start"> -->
-					{
-						// FIXME, no renderizan los curos correectamente
-						academics?.map(({title, courses }) => (
-							<AcademicCard
-								title={title}
-								courses={courses.platziFSWD}
-							/>
-						))
-					}
-			</article>
+			<section class="md:flex md:flex-row gap-x-4">
+				<article class="technologies mt-16 py-4 px-8 block card md:w-1/2">
+					<h4>Tecnologías</h4>
+					<ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start">
+	
+						{
+							techsStack?.map(({name, url}) => (
+								<SkillsCard
+								icon={url}
+								name={name}
+								/>
+							))
+						}
+					</ul>
+					<h4 class="mt-8 mb-4">Actualmente aprendiendo</h4>
+					<ul class="mt-4 w-full h-auto overflow-clip flex flex-row flex-wrap justify-start">
+						{
+							currentLearningStack?.map(({name, url}) => (
+								<SkillsCard
+								icon={url}
+								name={name}
+								/>
+							))
+						}
+					</ul>
+				</article>
+				<article class="academic mt-16 py-4 px-8 block card md:w-1/2">
+					<h4>Académico</h4>
+						{
+							academics?.map(({title, courses}) => (
+									<AcademicCard
+										title={title}
+										course={courses.platziFSWD}
+										course1={courses.platziUI}
+										course2={courses.fswd}
+										course3={courses.html}
+										course4={courses.js}
+										course5={courses.git}
+										course6={courses.sql}
+										course7={courses.eng}
+									/>
+								)
+							)
+						}
+				</article>
+			</section>
 		</div>
 	</main>
-	<footer>
+	<footer class="md:grid md:place-items-center md:grid-cols-2 md:gap-x-8">
+		<img src="assets/mailbox.svg" alt="mailbox-img" class="hidden md:block md:w-full md:h-full">
 		<Form 
 			title='Ponte en contacto'
 			name='Nombre'

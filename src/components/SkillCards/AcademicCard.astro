@@ -1,26 +1,32 @@
 ---
 interface Props {
 	title: string;
-    courses:string;
-    // platziUI: string;
-    // platziFSWD: string;
-    // fswd: string;
-    // html: string;
-    // js: string;
-    // git: string;
-    // sql: string;
-    // eng: string;
+	course: string;
+    course1: string;
+    course2: string;
+    course3: string;
+    course4: string;
+    course5: string;
+    course6: string;
+    course7: string;
 }
-const { title, courses } = Astro.props;
+const { title, course, course1,course2, course3, course4, course5, course6, course7 } = Astro.props;
 ---
 <ul>
     <span 
-    class="text-base"
+    class="text-base opacity-70"
     >
         {title}
     </span>
     <li 
-    class="w-1/2 my-2 text-center flex items-center self-center text-sm">
-        {courses}
+    class="w-full my-2 text-center flex items-center self-center text-sm">
+        {course}
+        {course1}
+        {course2} 
+        {course3} 
+        {course4} 
+        {course5} 
+        {course6} 
+        {course7}
     </li>
 </ul>

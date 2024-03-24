@@ -19,11 +19,11 @@ const { title, content, altImg, background, icon, demoUrl, repoUrl } = Astro.pro
 <div class="group relative block bg-black overflow-hidden rounded-lg h-80 sm:max-h-96 md:group-hover:max-h-auto">
       <img
       src={background}
-      class="h-full w-full absolute inset-0 object-cover bg-center opacity-25 transition-opacity group-hover:opacity-50"
+      class="h-full w-full absolute inset-0 object-cover bg-center opacity-40 transition-opacity group-hover:opacity-20"
       />
 
       <div class="relative h-full w-full p-4 sm:p-6 lg:p-8">
-            <h1 class=" text-lg font-semibold uppercase tracking-widest text-pink-500">
+            <h1 class=" text-lg font-bold uppercase tracking-widest text-neutral-300">
       <!-- TODO, agregar el icono -->
                   <slot 
                   name="before"
@@ -35,9 +35,9 @@ const { title, content, altImg, background, icon, demoUrl, repoUrl } = Astro.pro
                   <div
                   class="w-full h-full grid grid-rows-2 gap-x-0.5 md:translate-y-8 md:transform md:opacity-0 md:transition-all md:group-hover:translate-y-0 md:group-hover:opacity-100"
                   >
-                  <p class="text-sm text-white">
-                  {content}
-                  </p>
+                        <p class="mt-8 text-sm text-slate-200 ">
+                              {content}
+                        </p>
                   <div class="px-4 flex justify-between items-center gap-1 absolute bottom-4 left-0 w-full max-h-14 sm:mt-14 sm:justify-center md:justify-end lg:mt-24">
                   <MainButton 
                         url={demoUrl}
