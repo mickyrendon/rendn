@@ -9,7 +9,7 @@ interface Props {
 const { title, name, email, textarea, submit } = Astro.props;
 ---
 
-<section class="grid place-items-center mt-16 py-4 px-8 card md:max-w-1/2">
+<section class="grid place-items-center mt-8 md:mt-16 py-4 px-8 card md:max-w-1/2">
     <h1 class="form-title my-8 mx-4 w-full">{title}</h1>
       <form method="post" name="f-contact" action="./src/html/formReceived.html" data-netlify="true">
 
