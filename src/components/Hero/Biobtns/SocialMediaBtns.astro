@@ -1,0 +1,12 @@
+---
+interface Props {
+    url: string;
+    name: string;
+}
+const {url, name} = Astro.props
+---
+
+<a href={url} class="bg-neutral-300 rounded-full fill-[#13151a] hover:fill-neutral-300 md:hover:bg-[#13151a] md:hover:scale-125 transition" title={name}>
+    <slot name="icon" class="">
+    </slot>
+</a>

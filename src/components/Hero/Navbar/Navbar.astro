@@ -6,12 +6,12 @@ interface Props {
 const { title } = Astro.props
 ---
 
-<nav>
-    <figure class="flex justify-center items-center">
+<nav class="absolute top-0 left-0 w-full">
+    <figure class="flex justify-center items-center" title={title}>
         <svg
-        class="fill-blue-500"
-        width="120" 
-        height="72"
+        class="fill-blue-500 mr-2"
+        width="80" 
+        height="100"
         x="0px"
         y="0px"
         viewBox="0 0 777 298"

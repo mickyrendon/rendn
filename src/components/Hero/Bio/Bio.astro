@@ -6,17 +6,19 @@ interface Props{
 const { title } = Astro.props
 ---
 <!-- TODO, cambiar el style por tailwind -->
-<article class="card text-base font-medium block">
+<article class="card block md:w-3/5">
 	<h1 class="mb-4 text-2xl font-semibold">{title}</h1>
-	<p>
+	<p class="text-base font-normal text-pretty">
 		¡Bienvenido a mi portafolio!
 		<br/>
 		Soy Miguel Rendón, mejor conocido como 'micky'. 
 		<br/>
 		Soy un <b>Desarrollador web Front End</b> con más de
-		<b>dos años</b> de experiencia especializado en la experiencia del usuario UX/UI y community management.
+		<b>dos años</b> de experiencia especializado en el diseño de interfaces UI y community management con miras en el desarrollo Full Stack.
 		<br/>
-		Soy un apasionado por la fotografía, el diseño y los deportes.
+		Autodidacta y entusiaste del aprendizaje.
+		<br/>
+		Apasionado por la fotografía, el diseño y los deportes.
 		<br/>
 		En mis tiempos libres traduzco articulos de programación al español para FreeCodeCamp.
 	</p>
