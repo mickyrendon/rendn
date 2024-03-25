@@ -21,9 +21,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="relative">
-		<WavesUp client:visible/>
+		<WavesUp/>
 		<slot/>
-		<WavesDown client:visible/>
+		<WavesDown/>
 	</body>
 </html>
 <style is:global>
